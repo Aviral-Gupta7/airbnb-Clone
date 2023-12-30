@@ -105,6 +105,10 @@ app.use((req, res, next) => {
  Routes
 */
 
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
 app.get("/demouser", async (req, res) => {
   let fakeUser = new User({
     email: "student@gmail.com",
